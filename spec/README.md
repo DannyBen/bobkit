@@ -1,8 +1,8 @@
 Run Tests
 ==================================================
 
-  $ run spec
+`$ run spec`
 
 or
 
-  $ run spec SPEC_NAME
+`$ run spec SPEC_NAME`
