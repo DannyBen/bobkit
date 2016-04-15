@@ -32,3 +32,6 @@ Todo
 - [ ] CoffeeScript
 - [ ] Examples
 - [ ] Documentation
+- [ ] YAML loader
+- [ ] CSV Loader
+- [ ] Maybe: JSON renderer
