@@ -11,13 +11,12 @@ Gem::Specification.new do |s|
   s.authors     = ["Danny Ben Shitrit"]
   s.email       = 'db@dannyben.com'
   s.files       = Dir['README.md', 'lib/**/*.rb']
-  s.executables = ["bobkit"]
   s.homepage    = 'https://github.com/DannyBen/bobkit'
   s.license     = 'MIT'
   s.required_ruby_version = ">= 2.0.0"
 
-  s.add_runtime_dependency 'slim'
-  s.add_runtime_dependency 'sass'
+  s.add_runtime_dependency 'slim', "~> 3.0"
+  s.add_runtime_dependency 'sass', "~> 3.3"
 
   s.add_development_dependency 'runfile', '~> 0.6'
   s.add_development_dependency 'runfile-tasks', '~> 0.4'
