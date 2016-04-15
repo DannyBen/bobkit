@@ -1,6 +1,11 @@
 Bobkit - Site Generation Toolkit
 ==================================================
 
+[![Gem](https://img.shields.io/gem/v/bobkit.svg?style=flat-square)](https://rubygems.org/gems/bobkit)
+[![Travis](https://img.shields.io/travis/DannyBen/bobkit.svg?style=flat-square)](https://travis-ci.org/DannyBen/bobkit)
+[![Code Climate](https://img.shields.io/codeclimate/github/DannyBen/bobkit.svg?style=flat-square)](https://codeclimate.com/github/DannyBen/bobkit)
+[![Gemnasium](https://img.shields.io/gemnasium/DannyBen/bobkit.svg?style=flat-square)](https://gemnasium.com/DannyBen/bobkit)
+
 Install
 --------------------------------------------------
 
@@ -19,9 +24,9 @@ Soon
 Todo
 --------------------------------------------------
 
-- [ ] Travis
-- [ ] Code Climate
-- [ ] Readme Badges
+- [x] Travis
+- [x] Code Climate
+- [x] Readme Badges
 - [ ] Spec for file_helpers
 - [ ] copy_asset (file and folder)
 - [ ] CoffeeScript
