@@ -1,0 +1,11 @@
+Gemfile.lock
+*.gem
+
+/tmp
+/.sass-cache
+/coverage
+/dev.rb
+/doc
+/gems
+
+

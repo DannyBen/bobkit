@@ -1,0 +1,9 @@
+require "runfile-tasks"
+include Runfile::Exec
+
+action :dev do
+  run 'bundle exec ruby dev.rb'
+end
+
+RunfileTasks::RubyGems.all 'bobkit'
+RunfileTasks::Testing.rspec
