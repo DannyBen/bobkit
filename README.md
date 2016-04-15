@@ -27,7 +27,7 @@ Todo
 - [x] Travis
 - [x] Code Climate
 - [x] Readme Badges
-- [ ] Spec for file_helpers
+- [x] Spec for file_helpers
 - [ ] copy_asset (file and folder)
 - [ ] CoffeeScript
 - [ ] Examples
