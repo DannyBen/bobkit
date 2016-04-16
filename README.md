@@ -183,9 +183,10 @@ Todo
 --------------------------------------------------
 
 - [ ] CoffeeScript
-- [ ] Documentation
-- [ ] YAML loader
-- [ ] CSV Loader
+- [ ] YAML loader (data_folder?)
+- [ ] CSV Loader (data_folder?)
+- [ ] Verify SCSS works as in Rails (imports etc)
+- [ ] Maybe: Include file watcher and auto generate
 - [ ] Maybe: Render from/to Markdown
 - [ ] Maybe: Render to JSON
 
