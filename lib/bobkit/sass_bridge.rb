@@ -1,6 +1,7 @@
 module Bobkit
   module SassBridge
     include FileHelpers
+    include SassOptions
 
     def compile_css(file, options={})
       @file = "#{styles_folder}/#{file}.scss"
