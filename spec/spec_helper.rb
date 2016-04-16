@@ -15,4 +15,5 @@ include TestSupport
 
 RSpec.configure do |config|
   config.include Tasks
+  config.include Watcher
 end
