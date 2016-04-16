@@ -190,12 +190,34 @@ create_folder_for 'some/folder/with/file.png'
 ```
 
 
+### File Watcher
+
+Bobkit comes bundled with FileWatcher, and has a shortcut method to 
+use it.
+
+```ruby
+include Bobkit::Watcher
+
+watch do |filename, event|
+  puts "#{event}: #{filename}"
+  generate
+end
+
+def generate
+  # Your generation logic here
+end
+```
+
+The watch command is just like 
+`FileWatcher.new([...]).watch() do |filename, event|`
+with the exception that the array of paths to watch is optional. If none
+provided, we will watch all the input folders.
+
 Todo
 --------------------------------------------------
 
 - [ ] YAML loader (data_folder?)
 - [ ] CSV Loader (data_folder?)
-- [ ] Maybe: Include file watcher and auto generate
 - [ ] Maybe: Render from/to Markdown
 - [ ] Maybe: Render to JSON
 
