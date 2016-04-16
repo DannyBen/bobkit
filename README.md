@@ -19,7 +19,7 @@ The design intentions were:
 - To be packaged as a library, and not a command line tool.
 - To provide sensible default locations that are easily overridable.
 - To add `render` and `layout` support to Slim (Rails-like).
-- To add `@import 'globbing/*`` support to SCSS (Rails-like).
+- To add `@import 'globbing/*'` support to SCSS (Rails-like).
 
 ---
 
