@@ -1,5 +1,5 @@
 module Bobkit
-  module SlimExtra
+  module SlimBridge
     include FileHelpers
 
     def render(options={}, extra_options={})

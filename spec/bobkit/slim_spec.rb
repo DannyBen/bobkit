@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SlimExtra do
+describe SlimBridge do
   before :all do
     FileUtils.rm_rf 'tmp/spec'
   end

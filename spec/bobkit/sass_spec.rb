@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SassExtra do
+describe SassBridge do
   before :all do
     FileUtils.rm_rf 'tmp/spec'
   end

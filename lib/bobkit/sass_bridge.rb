@@ -1,5 +1,5 @@
 module Bobkit
-  module SassExtra
+  module SassBridge
     include FileHelpers
 
     def compile_css(file, options={})

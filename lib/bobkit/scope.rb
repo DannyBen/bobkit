@@ -1,6 +1,6 @@
 module Bobkit
   class Scope
-    include SlimExtra
+    include SlimBridge
 
     def initialize(scope)
       @scope = scope
