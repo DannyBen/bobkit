@@ -1,6 +1,6 @@
 # Multiple Output Pages
 require 'bobkit'
-include Bobkit::Actions
+include Bobkit::Tasks
 
 # Set options (these are only partial, and the defaults)
 templates_folder     'templates'

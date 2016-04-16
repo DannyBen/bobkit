@@ -1,6 +1,6 @@
 # Basic Example
 require 'bobkit'
-include Bobkit::Actions
+include Bobkit::Tasks
 
 puts "---> Convert Slim to HTML string"
 html = render 'youtube', video: 'hi9tOILaiNs'

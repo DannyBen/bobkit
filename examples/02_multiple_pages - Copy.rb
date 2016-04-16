@@ -1,6 +1,6 @@
 # Multiple Output Pages
 require 'bobkit'
-include Bobkit::Actions
+include Bobkit::Tasks
 
 cat_videos = ['tntOCGkgt98', 'MG8KADiRbOU', 'ny5vGbTfB8c']
 
