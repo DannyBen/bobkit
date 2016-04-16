@@ -2,6 +2,7 @@ module Bobkit
   module Actions
     include SassExtra
     include SlimExtra
+    include Assets
 
     def templates_folder(path=nil)
       setopt :templates_folder, path, 'templates'
@@ -21,6 +22,14 @@ module Bobkit
 
     def css_output_folder(path=nil)
       setopt :css_output_folder, path, "#{output_folder}/css"
+    end
+
+    def assets_folder(path=nil)
+      setopt :assets_folder, path, 'assets'
+    end
+
+    def assets_output_folder(path=nil)
+      setopt :assets_output_folder, path, "#{output_folder}/assets"
     end
 
     def slim_options(options=nil)

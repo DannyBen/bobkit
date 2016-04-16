@@ -24,11 +24,7 @@ Soon
 Todo
 --------------------------------------------------
 
-- [x] Travis
-- [x] Code Climate
-- [x] Readme Badges
-- [x] Spec for file_helpers
-- [ ] copy_asset (file and folder)
+- [x] copy_asset (file and folder)
 - [ ] CoffeeScript
 - [ ] Examples
 - [ ] Documentation

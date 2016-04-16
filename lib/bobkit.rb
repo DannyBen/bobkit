@@ -5,5 +5,7 @@ require 'slim'
 require 'bobkit/file_helpers'
 require 'bobkit/sass_extra'
 require 'bobkit/slim_extra'
+require 'bobkit/assets'
+
 require 'bobkit/scope'
 require 'bobkit/actions'

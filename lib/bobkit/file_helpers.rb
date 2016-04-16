@@ -18,6 +18,7 @@ module Bobkit
       FileUtils.copy_entry source, target
     end
     alias_method :copy_folder, :copy_file
+    alias_method :copy_entry, :copy_file
 
   end
 end

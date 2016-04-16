@@ -40,7 +40,7 @@ describe Actions do
     expect(output_folder).to eq "output"
   end
 
-  it "sets a output folder" do
+  it "sets an output folder" do
     output_folder "my_output"
     expect(output_folder).to eq "my_output"
   end
@@ -52,6 +52,24 @@ describe Actions do
   it "sets a css output folder" do
     css_output_folder "my_css_output"
     expect(css_output_folder).to eq "my_css_output"
+  end
+
+  it "has a default assets folder" do
+    expect(assets_folder).to eq "assets"
+  end
+
+  it "sets an assets folder" do
+    assets_folder "my_assets"
+    expect(assets_folder).to eq "my_assets"
+  end
+
+  it "has a default assets output folder" do
+    expect(assets_output_folder).to eq "output/assets"
+  end
+
+  it "sets an assets output folder" do
+    assets_output_folder "my_assets"
+    expect(assets_output_folder).to eq "my_assets"
   end
 
   it "has default slim options" do
