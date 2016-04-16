@@ -24,4 +24,10 @@ describe SassBridge do
     expect(File.exist?(outfile)).to be true
     expect(File.read(outfile)).to match /h1 .big/
   end
+
+  it "supports import with globbing" do
+    result = compile_css 'parent'
+    expect(result).to match /h2 .child/
+    expect(result).to match /h3 .grandchild/
+  end
 end

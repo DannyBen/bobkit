@@ -4,7 +4,7 @@ Gemfile.lock
 /tmp
 /.sass-cache
 /coverage
-/dev.rb
+/dev
 /doc
 /gems
 

@@ -1,8 +1,11 @@
 require "runfile-tasks"
 include Runfile::Exec
 
-action :dev do
-  run 'bundle exec ruby dev.rb'
+help   "Run a script in the dev folder"
+usage  "dev [<file>]"
+action :dev do |args|
+  file = args['<file>'] || 'test'
+  run "bundle exec ruby dev/#{file}.rb"
 end
 
 RunfileTasks::RubyGems.all 'bobkit'

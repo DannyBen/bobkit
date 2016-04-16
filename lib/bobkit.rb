@@ -1,5 +1,6 @@
 require 'fileutils'
 require 'sass'
+require 'sass-globbing'
 require 'slim'
 require 'coffee_script'
 

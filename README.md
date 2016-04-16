@@ -19,6 +19,7 @@ The design intentions were:
 - To be packaged as a library, and not a command line tool.
 - To provide sensible default locations that are easily overridable.
 - To add `render` and `layout` support to Slim (Rails-like).
+- To add `@import 'globbing/*`` support to SCSS (Rails-like).
 
 ---
 
@@ -194,7 +195,6 @@ Todo
 
 - [ ] YAML loader (data_folder?)
 - [ ] CSV Loader (data_folder?)
-- [ ] Verify SCSS works as in Rails (imports etc)
 - [ ] Maybe: Include file watcher and auto generate
 - [ ] Maybe: Render from/to Markdown
 - [ ] Maybe: Render to JSON

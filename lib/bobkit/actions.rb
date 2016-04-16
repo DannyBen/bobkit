@@ -26,7 +26,8 @@ module Bobkit
     end
 
     def scss_defaults
-      { cache: true, syntax: :scss, style: :nested } 
+      { cache: true, syntax: :scss, style: :nested, 
+        load_paths: [styles_folder] } 
     end
 
   end
