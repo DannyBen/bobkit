@@ -2,6 +2,7 @@ module Bobkit
   module SlimBridge
     include FileHelpers
     include SlimOptions
+    include LocationOptions
 
     def render(options={}, extra_options={})
       options = { partial: options }.merge(extra_options) if options.is_a? String

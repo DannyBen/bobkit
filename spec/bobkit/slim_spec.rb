@@ -28,6 +28,13 @@ describe SlimBridge do
     expect(result).to match /Email: james.brown@still-alive/
   end
 
+  it "renders a partial that calls another partial" do
+    result = render 'babushka', name: 'Big Babushka'
+    expect(result).to match /<h1>.*Big Babushka/m
+    expect(result).to match /<h2>.*Medium Babushka/m
+    expect(result).to match /<h3>.*Small Babushka/m
+  end
+
   it "renders a partial to a file" do
     outfile = "#{output_folder}/simple.html"
     expect(File.exist?(outfile)).to be false
