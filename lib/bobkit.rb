@@ -1,6 +1,7 @@
 require 'fileutils'
 require 'sass'
 require 'slim'
+require 'coffee_script'
 
 require 'bobkit/options_base'
 require 'bobkit/location_options'
