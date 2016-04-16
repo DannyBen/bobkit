@@ -14,5 +14,5 @@ require_relative 'support'
 include TestSupport
 
 RSpec.configure do |config|
-  config.include Actions
+  config.include Tasks
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Actions do
+describe Tasks do
   before :each do
     use_defaults
   end

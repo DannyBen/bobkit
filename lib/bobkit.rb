@@ -13,4 +13,4 @@ require 'bobkit/coffee_bridge'
 require 'bobkit/assets'
 
 require 'bobkit/scope'
-require 'bobkit/actions'
+require 'bobkit/tasks'

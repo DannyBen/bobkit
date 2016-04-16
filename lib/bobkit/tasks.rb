@@ -1,5 +1,5 @@
 module Bobkit
-  module Actions
+  module Tasks
     include OptionsBase
     include LocationOptions
     include SassBridge

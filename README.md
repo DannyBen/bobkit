@@ -50,7 +50,7 @@ The basic usage pattern is this:
 
 ```ruby
 require 'bobkit'
-include Bobkit::Actions
+include Bobkit::Tasks
 
 # Convert Slim to HTML string
 html = render 'youtube', video: 'hi9tOILaiNs'
