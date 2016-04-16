@@ -114,15 +114,15 @@ use_defaults
 ### Slim 
 
 ```ruby
-# You can set a scope before calling any `render`:
+# You can set a scope before calling any `render`
 scope CatVideo.new
 html = render 'cats'
 
-# You can use a hash as scope. 
+# You can use a hash as scope
 scope email: 'bob@kit.com', name: 'Bob'
 html = render 'user'
 
-# You can send a scope directly to `render`:
+# You can send a scope directly to `render`
 html = render 'user', email: 'bob@kit.com', name: 'Bob'
 
 # You can render with a layout
@@ -133,16 +133,61 @@ render 'user', layout: 'default', email: 'bob@kit.com', output: 'bob'
 ```
 
 
+### SCSS
+
+```ruby
+# You can compile SCSS to a CSS string, to do as you please with it
+css = compile_css 'style'
+
+# You can compile SCSS directly to a file
+compile_css 'style', output: 'main'
+```
+
+
+### Asset helpers
+
+Anything other than CSS, Javascript and HTML is considered an asset.
+These are some helpers to help you move them acount from input to output
+folders.
+
+```ruby
+# Copy a file from the `assets_folder` to the `assets_output_folder`
+copy_asset 'presskit.zip'
+
+# Copy a folder
+copy_asset 'images'
+```
+
+
+### Low level file and folder helpers
+
+If you want more control over what the `copy_asset` method provides, you
+can use any of these methods.
+
+```ruby
+# Copy a file - needed parent folders will be created as needed
+copy_file 'exact/path.zip', 'exact/output/file.zip'
+
+# Copy a folder - needed parent folders will be created as needed
+copy_file 'exact/path', 'exact/output/folder'
+
+# Create folder, and any of the needed parent folders
+create_folder 'my_folder'
+
+# Create folder for a file, with any of the needed parent folders
+create_folder_for 'some/folder/with/file.png'
+```
+
+
 Todo
 --------------------------------------------------
 
-- [x] copy_asset (file and folder)
-- [x] Examples
 - [ ] CoffeeScript
 - [ ] Documentation
 - [ ] YAML loader
 - [ ] CSV Loader
-- [ ] Maybe: JSON renderer
+- [ ] Maybe: Render from/to Markdown
+- [ ] Maybe: Render to JSON
 
 
 [1]: https://github.com/DannyBen/bobkit/tree/master/examples
