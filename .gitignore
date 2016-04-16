@@ -8,4 +8,5 @@ Gemfile.lock
 /doc
 /gems
 
+/examples/output/*
 
