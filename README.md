@@ -192,7 +192,6 @@ create_folder_for 'some/folder/with/file.png'
 Todo
 --------------------------------------------------
 
-- [ ] CoffeeScript
 - [ ] YAML loader (data_folder?)
 - [ ] CSV Loader (data_folder?)
 - [ ] Verify SCSS works as in Rails (imports etc)
