@@ -143,6 +143,16 @@ css = compile_css 'style'
 compile_css 'style', output: 'main'
 ```
 
+### CoffeeScript
+
+```ruby
+# You can compile CoffeeScript to a Javascript string
+js = compile_js 'script'
+
+# You can compile CoffeeScript directly to a file
+compile_js 'script', output: 'main'
+```
+
 
 ### Asset helpers
 
