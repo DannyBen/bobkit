@@ -15,6 +15,11 @@ describe SlimBridge do
     expect(result).to match /is a simple partial/
   end
 
+  it "renders a simple partial from another partial" do
+    result = render 'simple_render'
+    expect(result).to match /is a simple partial/
+  end
+
   it "renders a partial with a hash scope" do
     result = render 'movie_partial', movie: 'Ace Ventura', actor: 'Jim Carrey'
     expect(result).to match /Movie: Ace Ventura/
@@ -44,4 +49,5 @@ describe SlimBridge do
     expect(File.exist?(outfile)).to be true
     expect(File.read(outfile)).to match /is a simple partial/
   end
+
 end
