@@ -2,8 +2,8 @@ module Bobkit
   class Scope
     include SlimBridge
 
-    def initialize(scope)
-      @scope = scope
+    def initialize(scope=nil)
+      @scope = scope || {}
     end
 
     def method_missing(method_name, *arguments, &block)

@@ -216,6 +216,7 @@ provided, we will watch all the input folders.
 Todo
 --------------------------------------------------
 
+- [ ] Consider adding `input_root` which will prefix all others
 - [ ] YAML loader (data_folder?)
 - [ ] CSV Loader (data_folder?)
 - [ ] Maybe: Render from/to Markdown
