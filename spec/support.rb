@@ -8,4 +8,14 @@ module TestSupport
       'james.brown@still-alive.com'
     end
   end
+
+  class SpecYoutube
+    def video_name
+      'Cat vs Printer'
+    end
+
+    def video_tag(size)
+      "<video>#{size}</video>"
+    end
+  end
 end
