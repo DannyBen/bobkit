@@ -10,7 +10,7 @@ module Bobkit
       if @scope.respond_to?(:key?) and @scope.key?(method_name)
         @scope[method_name]
       elsif @scope.respond_to? method_name
-        @scope.send method_name
+        @scope.send method_name, *arguments
       else
         super
       end
