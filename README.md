@@ -133,6 +133,9 @@ html = render 'user', layout: 'default', email: 'bob@kit.com'
 render 'user', layout: 'default', email: 'bob@kit.com', output: 'bob'
 ```
 
+In addition, you can call `= render 'template'` from inside any Slim 
+template.
+
 
 ### SCSS
 
