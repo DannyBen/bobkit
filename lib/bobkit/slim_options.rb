@@ -4,8 +4,6 @@ module Bobkit
       setopt :slim_options, options, slim_defaults
     end
 
-    protected 
-
     def slim_defaults
       { pretty: true, disable_escape: true }
     end

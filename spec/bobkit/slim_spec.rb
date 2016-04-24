@@ -7,6 +7,7 @@ describe SlimBridge do
 
   before :each do
     templates_folder 'spec/fixtures/templates'
+    locales_folder 'spec/fixtures/locales'
     output_folder 'tmp/spec'
   end
 
@@ -17,6 +18,12 @@ describe SlimBridge do
 
   it "renders a simple partial from another partial" do
     result = render 'simple_render'
+    expect(result).to match /is a simple partial/
+  end
+
+  it "renders a partial with a layout" do
+    result = render 'simple_partial', layout: 'default'
+    expect(result).to match /<header>.*Header/m
     expect(result).to match /is a simple partial/
   end
 
@@ -35,6 +42,20 @@ describe SlimBridge do
 
     expect(File.exist?(outfile)).to be true
     expect(File.read(outfile)).to match /is a simple partial/
+  end
+
+  context "with localization" do
+    it "renders a localized string" do
+      locale :fr
+      result = render 'inline_localized'
+      expect(result).to match /Bonjour/
+    end
+
+    it "renders a localized template" do
+      locale :fr
+      result = render 'fully_localized'
+      expect(result).to match /Ce modèle entier est pour l'anglais seulement/
+    end
   end
 
   context "with hash scope" do
@@ -61,6 +82,5 @@ describe SlimBridge do
       expect(result).to match /YouTube footer/
     end
   end
-
 
 end

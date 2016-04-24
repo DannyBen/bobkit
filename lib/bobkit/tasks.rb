@@ -5,6 +5,7 @@ module Bobkit
     include SassBridge
     include SlimBridge
     include CoffeeBridge
+    include I18nBridge
     include SlimOptions
     include SassOptions
     include ScopeOptions

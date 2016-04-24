@@ -1,6 +1,7 @@
 module Bobkit
   class Scope
     include SlimBridge
+    include I18nMixin
 
     def initialize(scope=nil)
       @scope = scope || {}

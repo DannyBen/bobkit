@@ -1,0 +1,44 @@
+en:
+  date:
+    abbr_month_names: 
+      - ~
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec
+    day_names: 
+      - Sunday
+      - Monday
+      - Tueday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+    formats: 
+      default: "%A, %B %-d, %H:%M"
+    month_names: 
+      - ~
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December
+    order:
+      - month
+      - day
+      - year

@@ -37,5 +37,9 @@ module Bobkit
     def assets_output_folder(path=nil)
       setopt :assets_output_folder, path, "#{output_folder}/assets"
     end
+
+    def locales_folder(path=nil)
+      setopt :locales_folder, path, "locales"
+    end
   end
 end
