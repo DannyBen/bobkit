@@ -81,6 +81,15 @@ describe LocationOptions do
     expect(assets_folder).to eq "my_assets"
   end
 
+  it "has a default locales folder" do
+    expect(locales_folder).to eq "locales"
+  end
+
+  it "sets an locales folder" do
+    assets_folder "my_locales"
+    expect(assets_folder).to eq "my_locales"
+  end
+
   it "has a default assets output folder" do
     expect(assets_output_folder).to eq "output/assets"
   end

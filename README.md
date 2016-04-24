@@ -19,6 +19,7 @@ The design intentions were:
 - To be packaged as a library, and not a command line tool.
 - To provide sensible default locations that are easily overridable.
 - To add `render` and `layout` support to Slim (Rails-like).
+- To add i18n support to Slim (Rails-like).
 - To add `@import 'globbing/*'` support to SCSS (Rails-like).
 
 ---
@@ -89,6 +90,9 @@ layouts_folder 'my_layouts'
 # Location of the source SCSS files. Default: "styles"
 styles_folder 'styles'
 
+# Location of locale configuration files. Default: "locales"
+locales_folder 'locales'
+
 # Output location. Default: "output"
 output_folder 'site'
 
@@ -133,7 +137,7 @@ html = render 'user', layout: 'default', email: 'bob@kit.com'
 render 'user', layout: 'default', email: 'bob@kit.com', output: 'bob'
 ```
 
-In addition, you can call `= render 'template'` from inside any Slim 
+In addition, you can call `= render 'template'` from inside a slim 
 template.
 
 
@@ -171,6 +175,18 @@ copy_asset 'presskit.zip'
 # Copy a folder
 copy_asset 'images'
 ```
+
+### Internationalization (I18n)
+
+Bobkit supports these i18n features:
+
+- Set the folder for your localization files with `locales_folder` 
+  (default: 'locales').
+- You can call `= t('common.hello')` from a slim template.
+- You can call `= l(Time.now)` from a slim template.
+- Any call to `render 'template_name'` will first look for a localized
+  version of the file (`template_name.en.slim`) and will use it if found.
+  Otherwise, it will use the unlozalized filename (`template_name.slim`).
 
 
 ### Low level file and folder helpers

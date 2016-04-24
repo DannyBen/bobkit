@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'sass', "~> 3.3"
   s.add_runtime_dependency 'sass-globbing', '~> 1.1'
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
+  s.add_runtime_dependency 'i18n', '~> 0.7'
   s.add_runtime_dependency 'filewatcher', '~> 0.5'
 
   s.add_development_dependency 'runfile', '~> 0.6'
