@@ -8,7 +8,7 @@ Bobkit - Site Generation Toolkit
 
 ---
 
-Bobkit is a lightweight tookit for generating static websites with Slim, SCSS
+Bobkit is a lightweight toolkit for generating static websites with Slim, SCSS
 and CoffeeScript.
 
 The design intentions were:
