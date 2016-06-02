@@ -16,15 +16,17 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 2.0.0"
 
   s.add_runtime_dependency 'slim', "~> 3.0"
-  s.add_runtime_dependency 'sass', "~> 3.3"
+  s.add_runtime_dependency 'sass', "~> 3.4"
   s.add_runtime_dependency 'sass-globbing', '~> 1.1'
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
   s.add_runtime_dependency 'i18n', '~> 0.7'
   s.add_runtime_dependency 'filewatcher', '~> 0.5'
-  s.add_runtime_dependency 'rdiscount', '~> 2.2'
   s.add_runtime_dependency 'therubyracer', '~> 0.12'
+  s.add_runtime_dependency 'rdiscount', '~> 2.2'
 
-  s.add_development_dependency 'runfile', '~> 0.6'
+  s.add_development_dependency 'runfile', '~> 0.7'
   s.add_development_dependency 'runfile-tasks', '~> 0.4'
-  s.add_development_dependency 'byebug', '~> 8.2'
+  s.add_development_dependency 'byebug', '~> 9.0'
+  s.add_development_dependency 'rspec', '~> 3.4'
+  s.add_development_dependency 'simplecov', '~> 0.11'
 end
