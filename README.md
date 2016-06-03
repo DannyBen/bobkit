@@ -188,7 +188,7 @@ html = markdown 'article', layout: :default, sidebar: true
 ### Asset helpers
 
 Anything other than CSS, Javascript and HTML is considered an asset.
-These are some helpers to help you move them acount from input to output
+These are some helpers to help you move them around from input to output
 folders.
 
 ```ruby
