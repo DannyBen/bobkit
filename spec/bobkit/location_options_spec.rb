@@ -27,6 +27,15 @@ describe LocationOptions do
     expect(layouts_folder).to eq "my_layouts"
   end
 
+  it "has a default markdown folder" do
+    expect(markdown_folder).to eq "markdown"
+  end
+
+  it "sets a markdown folder" do
+    markdown_folder "docs"
+    expect(markdown_folder).to eq "docs"
+  end
+
   it "has a default styles folder" do
     expect(styles_folder).to eq "styles"
   end
