@@ -18,7 +18,7 @@ module Bobkit
         layout  = options.delete :layout
         output  = options.delete :output
         content = options.delete :content
-        
+
         context = options.empty? ? scope : options
         if context.is_a? Hash or !context
           context = Scope.new context 

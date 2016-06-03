@@ -1,0 +1,14 @@
+doctype html
+
+head
+  title Bobkit Example
+  link href='css/style.css' rel='stylesheet' type='text/css'
+
+body
+  - if have? :sidebar
+    nav
+      ul
+        - sidebar.each do |title, link|
+          a href="#{link}" title
+    
+  == yield

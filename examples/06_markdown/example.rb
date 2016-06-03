@@ -1,15 +1,14 @@
-# Basic Example
+# Markdown
 require 'bobkit'
 include Bobkit::Tasks
 
 puts "---> Convert Markdown to HTML string"
-html = markdown 'blog', layout: :default
+html = markdown 'article'
 puts html
 
-# puts "---> Convert Slim to HTML file"
-# render 'youtube', layout: 'default', video: 'hi9tOILaiNs', output: 'bobcat'
-# puts "     View the file in output/bobcat.html"
+puts "---> Convert Markdown to HTML string with layout"
+html = markdown 'article', layout: :default
+puts html
 
-# puts "---> Compile SCSS"
-# compile_css 'main', output: 'style'
-# puts "     The file is now in output/css/style.css"
+puts "---> Convert Markdown to HTML file with layout"
+markdown 'article', layout: :default, output: 'article'
