@@ -1,4 +1,4 @@
-# Multiple Output Pages
+# Options
 require 'bobkit'
 include Bobkit::Tasks
 

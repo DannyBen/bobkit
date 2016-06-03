@@ -1,4 +1,4 @@
-# Locales Example
+# Locales
 
 require 'bobkit'
 include Bobkit::Tasks
