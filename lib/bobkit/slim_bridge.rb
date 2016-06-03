@@ -17,13 +17,14 @@ module Bobkit
         partial = options.delete :partial
         layout  = options.delete :layout
         output  = options.delete :output
+        content = options.delete :content
         
         context = options.empty? ? scope : options
         if context.is_a? Hash or !context
           context = Scope.new context 
         end
 
-        content = Slim::Template.new(partial_filename(partial), slim_options).render(context)
+        content ||= Slim::Template.new(partial_filename(partial), slim_options).render(context)
         content = Slim::Template.new(layout_filename(layout), slim_options).render(context) { content } if layout
         create_file "#{output_folder}/#{output}.html", content if output
         content

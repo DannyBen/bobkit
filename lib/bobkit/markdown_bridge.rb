@@ -1,17 +1,20 @@
 module Bobkit
   module MarkdownBridge
     def markdown(file, *args)
-      MarkdownHandler.instance.render file, *args
+      MarkdownHandler.instance.compile file, *args
     end
 
     class MarkdownHandler
       include Singleton
-      # include FileHelpers
-      # include LocationOptions
+      include SlimBridge
+      include LocationOptions
 
-      def render(file, options={})
+      def compile(file, options={})
         markdown = RDiscount.new file_content file
-        markdown.to_html
+        content = markdown.to_html
+        options[:content] = content
+        content = render options if options[:layout]
+        content
       end
 
       private
@@ -21,7 +24,6 @@ module Bobkit
       end
 
       def markdown_file(basename)
-        markdown_folder = 'markdown'
         "#{markdown_folder}/#{basename}.md"
       end
     end

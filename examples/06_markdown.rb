@@ -3,7 +3,7 @@ require 'bobkit'
 include Bobkit::Tasks
 
 puts "---> Convert Markdown to HTML string"
-html = markdown 'blog'
+html = markdown 'blog', layout: :default
 puts html
 
 # puts "---> Convert Slim to HTML file"
