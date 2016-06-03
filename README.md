@@ -141,6 +141,9 @@ html = render 'user', layout: 'default', email: 'bob@kit.com'
 
 # You can save to a file in the `output_folder`
 render 'user', layout: 'default', email: 'bob@kit.com', output: 'bob'
+
+# You can send an HTML string as the content of a layout
+render content: "<h1>Hello</h1>", layout: 'default'
 ```
 
 In addition, you can call `= render 'template'` from inside a slim 
