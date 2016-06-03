@@ -1,4 +1,4 @@
-# Markdown Slim
+# Markdown Layout
 
 require 'bobkit'
 require 'byebug'
