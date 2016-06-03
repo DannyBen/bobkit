@@ -8,19 +8,23 @@ Bobkit - Site Generation Toolkit
 
 ---
 
-Bobkit is a lightweight toolkit for generating static websites with Slim, SCSS
-and CoffeeScript.
+Bobkit is a lightweight toolkit for generating static websites with:
 
-The design intentions were:
+#### `Slim + SCSS + CoffeeScript + Markdown + I18n`
 
-- To provide easy to use wrapper methods for Slim, SCSS and CoffeeScript
-- To not impose any directory structure (this is not a blog generator...).
-- To allow you to use standard ruby for generating your site.
-- To be packaged as a library, and not a command line tool.
-- To provide sensible default locations that are easily overridable.
-- To add `render` and `layout` support to Slim (Rails-like).
-- To add i18n support to Slim (Rails-like).
-- To add `@import 'globbing/*'` support to SCSS (Rails-like).
+---
+
+The design intentions were to:
+
+- Provide easy to use wrapper methods for Slim, SCSS, CoffeeScript and 
+  Markdown.
+- Not impose any directory structure (this is not another blog generator...).
+- Allow you to use standard ruby for generating your site how you see fit.
+- Be packaged as a library, and not a command line tool.
+- Provide sensible default locations that are easily overridable.
+- Add `render` and `layout` support to Slim (Rails-like).
+- Add i18n support to Slim (Rails-like).
+- Add `@import 'globbing/*'` support to SCSS (Rails-like).
 
 ---
 
@@ -87,6 +91,9 @@ templates_folder 'views'
 # Default: "#{templates_folder}/layouts"
 layouts_folder 'my_layouts'
 
+# Location of markdown files. Default: "markdown"
+markdown_folder 'docs'
+
 # Location of the source SCSS files. Default: "styles"
 styles_folder 'styles'
 
@@ -115,7 +122,6 @@ scss_options cache: true, syntax: :scss, style: :nested
 use_defaults
 ```
 
-
 ### Slim 
 
 ```ruby
@@ -135,11 +141,16 @@ html = render 'user', layout: 'default', email: 'bob@kit.com'
 
 # You can save to a file in the `output_folder`
 render 'user', layout: 'default', email: 'bob@kit.com', output: 'bob'
+
+# You can send an HTML string as the content of a layout
+render content: "<h1>Hello</h1>", layout: 'default'
 ```
 
 In addition, you can call `= render 'template'` from inside a slim 
-template.
+template. 
 
+To check if a certain context variable was provided to a slim template,
+you can use `if have? :varname`.
 
 ### SCSS
 
@@ -161,6 +172,18 @@ js = compile_js 'script'
 compile_js 'script', output: 'main'
 ```
 
+### Markdown
+
+```ruby
+# Compile a markdown file to HTML string
+html = markdown 'article'
+
+# Compile directly to a file, inside a slim layout
+markdown 'article', layout: :default, output: 'article'
+
+# All options pass through directly to the slim renderer
+html = markdown 'article', layout: :default, sidebar: true
+```
 
 ### Asset helpers
 
@@ -208,7 +231,6 @@ create_folder 'my_folder'
 create_folder_for 'some/folder/with/file.png'
 ```
 
-
 ### File Watcher
 
 Bobkit comes bundled with FileWatcher, and has a shortcut method to 
@@ -238,8 +260,6 @@ Todo
 - [ ] Consider adding `input_root` which will prefix all others
 - [ ] YAML loader (data_folder?)
 - [ ] CSV Loader (data_folder?)
-- [ ] Maybe: Render from/to Markdown
-- [ ] Maybe: Render to JSON
 
 
 [1]: https://github.com/DannyBen/bobkit/tree/master/examples

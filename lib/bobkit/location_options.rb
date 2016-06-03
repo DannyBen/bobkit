@@ -6,6 +6,10 @@ module Bobkit
       setopt :templates_folder, path, 'templates'
     end
 
+    def markdown_folder(path=nil)
+      setopt :markdown_folder, path, 'markdown'
+    end
+
     def layouts_folder(path=nil)
       setopt :layouts_folder, path, "#{templates_folder}/layouts"
     end

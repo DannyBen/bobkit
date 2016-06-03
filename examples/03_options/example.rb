@@ -1,4 +1,5 @@
 # Options
+
 require 'bobkit'
 include Bobkit::Tasks
 
@@ -11,13 +12,8 @@ css_output_folder    "#{output_folder}/css"
 js_output_folder     "#{output_folder}/js"
 
 # Generate the site
-puts "---> Generating Cat Pages"
 render 'youtube', layout: 'default', video: 'tntOCGkgt98', output: "cat"
-
-puts "---> Copying CSS"
 compile_css 'main', output: 'style'
-
-puts "---> Copying JS"
 compile_js 'main', output: 'script'
 
-puts "---> Output is in the output folder"
+# Output is in the output folder

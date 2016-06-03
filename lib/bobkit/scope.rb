@@ -26,5 +26,7 @@ module Bobkit
         super
       end
     end
+    alias_method :have?, :respond_to?
+
   end
 end

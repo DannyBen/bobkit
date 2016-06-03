@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'i18n', '~> 0.7'
   s.add_runtime_dependency 'filewatcher', '~> 0.5'
   s.add_runtime_dependency 'therubyracer', '~> 0.12'
+  s.add_runtime_dependency 'rdiscount', '~> 2.2'
 
   s.add_development_dependency 'runfile', '~> 0.7'
   s.add_development_dependency 'runfile-tasks', '~> 0.4'

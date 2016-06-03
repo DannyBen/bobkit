@@ -83,4 +83,12 @@ describe SlimBridge do
     end
   end
 
+  context "with string content" do
+    it "renders with layout" do
+      result = render content: '<p>A string content</p>', layout: 'default'
+      expect(result).to match /<header>.*Header/m
+      expect(result).to match /A string content/
+    end
+  end
+
 end

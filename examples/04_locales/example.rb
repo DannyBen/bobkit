@@ -6,17 +6,17 @@ include Bobkit::Tasks
 # Optionally, set locales folder if different than 'locales'
 # locales_folder 'path/to/locales_folder'
 
-puts "---> Generating English Pages"
+# Generate a page in English
 locale :en
 puts render 'hello'
 
-puts "---> Generating French Pages"
+# Generate a page in French
 locale :fr
 puts render 'hello'
 
+# Use localized templates.
 # In this case, we automatically use the "fairly_local.en.slim" and
 # "fairly_local.fr.slim" templates
-puts "--> Generating different templates for each locale"
 locale :en
 puts render 'fairly_local'
 locale :fr

@@ -1,15 +1,16 @@
 # Basic Example
+
 require 'bobkit'
 include Bobkit::Tasks
 
-puts "---> Convert Slim to HTML string"
+# Convert Slim to HTML string
 html = render 'youtube', video: 'hi9tOILaiNs'
 puts html
 
-puts "---> Convert Slim to HTML file"
+# Convert Slim to HTML file
+# Outputs to: output/bobcat.html
 render 'youtube', layout: 'default', video: 'hi9tOILaiNs', output: 'bobcat'
-puts "     View the file in output/bobcat.html"
 
-puts "---> Compile SCSS"
+# Compile SCSS
+# Outputs to output/css/style.css
 compile_css 'main', output: 'style'
-puts "     The file is now in output/css/style.css"
