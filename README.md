@@ -180,6 +180,7 @@ markdown 'article', layout: :default, output: 'article'
 
 # All options pass through directly to the slim renderer
 html = markdown 'article', layout: :default, sidebar: true
+```
 
 ### Asset helpers
 
