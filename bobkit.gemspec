@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Bobkit::VERSION
   s.date        = Date.today.to_s
   s.summary     = "Site Generation Toolkit"
-  s.description = "Lightweight Site Generation Toolkit with Slim, SCSS and CoffeeScript"
+  s.description = "Site Generation Toolkit with Slim, SCSS, CoffeeScript and Markdown"
   s.authors     = ["Danny Ben Shitrit"]
   s.email       = 'db@dannyben.com'
   s.files       = Dir['README.md', 'lib/**/*.rb']
