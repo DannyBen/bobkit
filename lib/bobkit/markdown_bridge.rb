@@ -6,14 +6,13 @@ module Bobkit
 
     class MarkdownHandler
       include Singleton
-      include SlimBridge
       include LocationOptions
 
       def compile(file, options={})
         markdown = RDiscount.new file_content file
         content = markdown.to_html
         options[:content] = content
-        content = render options if options[:layout]
+        content = SlimBridge.render options if options[:layout]
         content
       end
 
