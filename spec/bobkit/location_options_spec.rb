@@ -9,8 +9,29 @@ describe LocationOptions do
     use_defaults
   end
 
+  it "has a default root folder" do
+    expect(root_folder).to eq "."
+  end
+
+  it "sets a root folder" do
+    root_folder "my_app"
+    expect(root_folder).to eq "my_app"
+  end
+
+  it "sets a base folder for all locations" do
+    root_folder "app"
+    folders = [:templates_folder, :markdown_folder, :styles_folder, 
+      :coffee_folder, :output_folder, :assets_folder, :locales_folder, 
+      :layouts_folder, :css_output_folder, :js_output_folder, 
+      :assets_output_folder ]
+
+    folders.each do |folder|
+      expect(self.send(folder)).to match /^app\//
+    end
+  end
+
   it "has a default templates folder" do
-    expect(templates_folder).to eq "templates"
+    expect(templates_folder).to eq "./templates"
   end
 
   it "sets a templates folder" do
@@ -19,7 +40,7 @@ describe LocationOptions do
   end
 
   it "has a default layouts folder" do
-    expect(layouts_folder).to eq "templates/layouts"
+    expect(layouts_folder).to eq "./templates/layouts"
   end
 
   it "sets a layouts folder" do
@@ -28,7 +49,7 @@ describe LocationOptions do
   end
 
   it "has a default markdown folder" do
-    expect(markdown_folder).to eq "markdown"
+    expect(markdown_folder).to eq "./markdown"
   end
 
   it "sets a markdown folder" do
@@ -37,7 +58,7 @@ describe LocationOptions do
   end
 
   it "has a default styles folder" do
-    expect(styles_folder).to eq "styles"
+    expect(styles_folder).to eq "./styles"
   end
 
   it "sets a styles folder" do
@@ -46,7 +67,7 @@ describe LocationOptions do
   end
 
   it "has a default coffee folder" do
-    expect(coffee_folder).to eq "coffee"
+    expect(coffee_folder).to eq "./coffee"
   end
 
   it "sets a coffee folder" do
@@ -55,7 +76,7 @@ describe LocationOptions do
   end
 
   it "has a default output folder" do
-    expect(output_folder).to eq "output"
+    expect(output_folder).to eq "./output"
   end
 
   it "sets an output folder" do
@@ -64,7 +85,7 @@ describe LocationOptions do
   end
 
   it "has a default css output folder" do
-    expect(css_output_folder).to eq "output/css"
+    expect(css_output_folder).to eq "./output/css"
   end
 
   it "sets a css output folder" do
@@ -73,7 +94,7 @@ describe LocationOptions do
   end
 
   it "has a default js output folder" do
-    expect(js_output_folder).to eq "output/js"
+    expect(js_output_folder).to eq "./output/js"
   end
 
   it "sets a js output folder" do
@@ -82,7 +103,7 @@ describe LocationOptions do
   end
 
   it "has a default assets folder" do
-    expect(assets_folder).to eq "assets"
+    expect(assets_folder).to eq "./assets"
   end
 
   it "sets an assets folder" do
@@ -91,7 +112,7 @@ describe LocationOptions do
   end
 
   it "has a default locales folder" do
-    expect(locales_folder).to eq "locales"
+    expect(locales_folder).to eq "./locales"
   end
 
   it "sets an locales folder" do
@@ -100,7 +121,7 @@ describe LocationOptions do
   end
 
   it "has a default assets output folder" do
-    expect(assets_output_folder).to eq "output/assets"
+    expect(assets_output_folder).to eq "./output/assets"
   end
 
   it "sets an assets output folder" do

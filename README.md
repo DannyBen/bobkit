@@ -84,6 +84,9 @@ Each of these methods can be called with or without a parameter. When
 called without a parameter, it will simply return the value.
 
 ```ruby
+# Base location of all other folders. Default: "."
+root_folder 'my_app'
+
 # Location of source Slim templates. Default: "templates"
 templates_folder 'views'
 
@@ -257,7 +260,6 @@ provided, we will watch all the input folders.
 Todo
 --------------------------------------------------
 
-- [ ] Consider adding `input_root` which will prefix all others
 - [ ] YAML loader (data_folder?)
 - [ ] CSV Loader (data_folder?)
 
