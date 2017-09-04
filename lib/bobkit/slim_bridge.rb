@@ -13,7 +13,13 @@ module Bobkit
       include I18nBridge
 
       def render(options={}, extra_options={})
-        options = { partial: options }.merge(extra_options) if options.is_a? String
+        if options.is_a? String
+          options = { partial: options }.merge(extra_options) 
+        elsif options.respond_to? :to_partial
+          scope options
+          options = { partial: options.to_partial }.merge(extra_options) 
+        end
+
         partial = options.delete :partial
         layout  = options.delete :layout
         output  = options.delete :output
