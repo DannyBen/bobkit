@@ -44,6 +44,13 @@ describe SlimBridge do
     expect(File.read(outfile)).to match /is a simple partial/
   end
 
+  it "renders an object", :focus do
+    user = SpecUser.new
+    result = render user
+    expect(result).to match /Name: James Brown/
+    expect(result).to match /Email: james.brown@still-alive/
+  end
+
   context "with localization" do
     it "renders a localized string" do
       locale :fr

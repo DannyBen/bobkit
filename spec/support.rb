@@ -7,6 +7,10 @@ module TestSupport
     def email
       'james.brown@still-alive.com'
     end
+
+    def to_partial
+      'user_partial'
+    end
   end
 
   class SpecYoutube
