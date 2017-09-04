@@ -137,7 +137,7 @@ scope email: 'bob@kit.com', name: 'Bob'
 html = render 'user'
 
 # You can render an object that responds to 'to_partial'
-# This method should return a path to the partial file
+# This method should return the name of the partial file
 user = User.new
 html = render user
 
