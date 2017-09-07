@@ -44,7 +44,7 @@ describe SlimBridge do
     expect(File.read(outfile)).to match /is a simple partial/
   end
 
-  it "renders an object", :focus do
+  it "renders an object" do
     user = SpecUser.new
     result = render user
     expect(result).to match /Name: James Brown/
