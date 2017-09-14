@@ -24,3 +24,4 @@ require 'bobkit/watcher'
 
 require 'bobkit/scope'
 require 'bobkit/tasks'
+require 'bobkit/bob'
