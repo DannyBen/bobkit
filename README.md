@@ -74,6 +74,25 @@ compile_css 'main', output: 'style'
 See more examples in the [Examples folder][1]
 
 
+### DSL or Instance
+
+Bobkit was primarily designed as a DSL, but if you wish to use a more scoped
+approach, you can use an instance of the `Bob` class.
+
+```ruby
+require 'bobkit'
+
+# Option 1: DSL
+include Bobkit::Tasks
+render ...
+compile_css ...
+
+# Option 2: Bob class
+bob = Bob.new
+bob.render ...
+bob.compile_css
+```
+
 Reference
 --------------------------------------------------
 
