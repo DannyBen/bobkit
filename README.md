@@ -249,7 +249,7 @@ can use any of these methods.
 copy_file 'exact/path.zip', 'exact/output/file.zip'
 
 # Copy a folder - needed parent folders will be created as needed
-copy_file 'exact/path', 'exact/output/folder'
+copy_folder 'exact/path', 'exact/output/folder'
 
 # Create folder, and any of the needed parent folders
 create_folder 'my_folder'
