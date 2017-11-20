@@ -277,7 +277,7 @@ end
 ```
 
 The watch command is just like 
-`FileWatcher.new([...]).watch() do |filename, event|`
+`Filewatcher.new([...]).watch() do |filename, event|`
 with the exception that the array of paths to watch is optional. If none
 provided, we will watch all the input folders.
 

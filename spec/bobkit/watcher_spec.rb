@@ -9,16 +9,16 @@ describe Watcher do
     templates_folder 'tmp/spec'
   end
 
-  it "should watch for change" do
+  it "should watch for change", :focus do
     processed = []
     thread = Thread.new(filewatcher, processed) do
-      filewatcher.watch(0.1){ |f,e| processed << f }
+      filewatcher.watch { |f,e| processed << f }
     end
-    sleep 0.2
+    sleep 0.3
     
     create_file "#{templates_folder}/watchme.txt", 'hello'
-    sleep 0.2
-    
+    sleep 0.3
+
     expect(processed[0]).to match /watchme.txt/
     filewatcher.stop
   end

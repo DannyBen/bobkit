@@ -22,7 +22,7 @@ module Bobkit
       end
 
       def filewatcher
-        FileWatcher.new(paths)
+        Filewatcher.new(paths)
       end
 
       protected
