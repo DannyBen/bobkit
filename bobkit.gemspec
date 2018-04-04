@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'sass', "~> 3.5"
   s.add_runtime_dependency 'sass-globbing', '~> 1.1'
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
-  s.add_runtime_dependency 'i18n', '~> 0.8'
+  s.add_runtime_dependency 'i18n', '~> 1.0'
   s.add_runtime_dependency 'filewatcher', '~> 1.0'
   s.add_runtime_dependency 'therubyracer', '~> 0.12'
   s.add_runtime_dependency 'rdiscount', '~> 2.2'
