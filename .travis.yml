@@ -1,5 +1,7 @@
 language: ruby
 
+cache: bundler
+
 env:
   global:
   - CC_TEST_REPORTER_ID=0a9f1ac1e99247a3b49b7dd1ac62f91aff6cf2e1263aa17dbaa47ca8ad363d56
