@@ -1,10 +1,10 @@
 Bobkit - Site Generation Toolkit
 ==================================================
 
-[![Gem](https://img.shields.io/gem/v/bobkit.svg?style=flat-square)](https://rubygems.org/gems/bobkit)
-[![Build](https://img.shields.io/travis/DannyBen/bobkit/master.svg?style=flat-square)](https://travis-ci.org/DannyBen/bobkit)
-[![Maintainability](https://img.shields.io/codeclimate/maintainability/DannyBen/bobkit.svg?style=flat-square)](https://codeclimate.com/github/DannyBen/bobkit)
-[![Dependencies](https://img.shields.io/gemnasium/DannyBen/bobkit.svg?style=flat-square)](https://gemnasium.com/DannyBen/bobkit)
+[![Gem Version](https://badge.fury.io/rb/bobkit.svg)](https://badge.fury.io/rb/bobkit)
+[![Build Status](https://travis-ci.org/DannyBen/bobkit.svg?branch=master)](https://travis-ci.org/DannyBen/bobkit)
+[![Maintainability](https://api.codeclimate.com/v1/badges/64c20ebaaf8ecff0948d/maintainability)](https://codeclimate.com/github/DannyBen/bobkit/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/64c20ebaaf8ecff0948d/test_coverage)](https://codeclimate.com/github/DannyBen/bobkit/test_coverage)
 
 ---
 
