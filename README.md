@@ -2,7 +2,7 @@ Bobkit - Site Generation Toolkit
 ==================================================
 
 [![Gem Version](https://badge.fury.io/rb/bobkit.svg)](https://badge.fury.io/rb/bobkit)
-[![Build Status](https://travis-ci.org/DannyBen/bobkit.svg?branch=master)](https://travis-ci.org/DannyBen/bobkit)
+[![Build Status](https://travis-ci.com/DannyBen/bobkit.svg?branch=master)](https://travis-ci.com/DannyBen/bobkit)
 [![Maintainability](https://api.codeclimate.com/v1/badges/64c20ebaaf8ecff0948d/maintainability)](https://codeclimate.com/github/DannyBen/bobkit/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/64c20ebaaf8ecff0948d/test_coverage)](https://codeclimate.com/github/DannyBen/bobkit/test_coverage)
 
