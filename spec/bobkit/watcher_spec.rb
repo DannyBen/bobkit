@@ -9,7 +9,7 @@ describe Watcher do
     templates_folder 'tmp/spec'
   end
 
-  it "should watch for change", :focus do
+  it "should watch for change" do
     processed = []
     thread = Thread.new(filewatcher, processed) do
       filewatcher.watch { |f,e| processed << f }
