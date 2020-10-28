@@ -8,7 +8,6 @@ module Bobkit
     include I18nBridge
     include MarkdownBridge
     include SlimOptions
-    include SassOptions
     include ScopeOptions
     include Assets
   end

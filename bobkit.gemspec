@@ -14,11 +14,10 @@ Gem::Specification.new do |s|
   s.files       = Dir['README.md', 'lib/**/*.rb']
   s.homepage    = 'https://github.com/DannyBen/bobkit'
   s.license     = 'MIT'
-  s.required_ruby_version = ">= 2.0.0"
+  s.required_ruby_version = ">= 2.4.0"
 
   s.add_runtime_dependency 'slim', "~> 4.0"
-  s.add_runtime_dependency 'sass', "~> 3.7"
-  s.add_runtime_dependency 'sass-globbing', '~> 1.1'
+  s.add_runtime_dependency 'sasstool', '~> 0.1'
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
   s.add_runtime_dependency 'i18n', '~> 1.7'
   s.add_runtime_dependency 'filewatcher', '~> 1.1'
