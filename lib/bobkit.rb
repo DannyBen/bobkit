@@ -1,3 +1,5 @@
+require 'singleton'
+
 require 'i18n'
 require 'fileutils'
 require 'sasstool'
