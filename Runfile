@@ -4,7 +4,7 @@ help   "Run a script in the dev folder"
 usage  "dev [<file>]"
 action :dev do |args|
   file = args['<file>'] || 'test'
-  run "bundle exec ruby dev/#{file}.rb"
+  system "bundle exec ruby dev/#{file}.rb"
 end
 
 RunfileTasks::RubyGems.all 'bobkit'
