@@ -1,5 +1,4 @@
-Bobkit - Site Generation Toolkit
-==================================================
+# Bobkit - Site Generation Toolkit
 
 [![Gem Version](https://badge.fury.io/rb/bobkit.svg)](https://badge.fury.io/rb/bobkit)
 [![Build Status](https://github.com/DannyBen/bobkit/workflows/Test/badge.svg)](https://github.com/DannyBen/bobkit/actions?query=workflow%3ATest)
@@ -29,8 +28,7 @@ The design intentions were to:
 
 
 
-Install
---------------------------------------------------
+## Install
 
 `gem install bobkit`
 
@@ -40,8 +38,7 @@ Or with Bundler:
 
 
 
-Usage
---------------------------------------------------
+## Usage
 
 The basic usage pattern is this:
 
@@ -92,8 +89,7 @@ bob.render ...
 bob.compile_css ...
 ```
 
-Reference
---------------------------------------------------
+## Reference
 
 ### Setting folder locations and options
 
@@ -265,9 +261,11 @@ use it.
 ```ruby
 include Bobkit::Watcher
 
-watch do |filename, event|
-  puts "#{event}: #{filename}"
-  generate
+watch do |changes|
+  changes do |filename, event|
+    puts "#{event}: #{filename}"
+    generate
+  end
 end
 
 def generate
@@ -279,12 +277,6 @@ The watch command is just like
 `Filewatcher.new([...]).watch() do |filename, event|`
 with the exception that the array of paths to watch is optional. If none
 provided, we will watch all the input folders.
-
-Todo
---------------------------------------------------
-
-- [ ] YAML loader (data_folder?)
-- [ ] CSV Loader (data_folder?)
 
 
 [1]: https://github.com/DannyBen/bobkit/tree/master/examples
