@@ -19,7 +19,8 @@ describe Watcher do
     create_file "#{templates_folder}/watchme.txt", 'hello'
     sleep 0.3
 
-    expect(processed[0]).to match /watchme.txt/
+    path = processed[0].keys.first
+    expect(path).to match /watchme.txt/
     filewatcher.stop
   end
 
