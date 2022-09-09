@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.required_ruby_version = ">= 2.6.0"
 
-  s.add_runtime_dependency 'sasstool', '~> 0.2.1'
+  s.add_runtime_dependency 'sasstool', '~> 0.2'
   s.add_runtime_dependency 'slim', "~> 4.0"
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
   s.add_runtime_dependency 'i18n', '~> 1.7'
