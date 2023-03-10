@@ -1,7 +1,7 @@
 module Bobkit
   module SlimBridge
     def render(*args)
-      SlimHandler.instance.render *args
+      SlimHandler.instance.render(*args)
     end
 
     class SlimHandler
@@ -12,12 +12,12 @@ module Bobkit
       include ScopeOptions
       include I18nBridge
 
-      def render(options={}, extra_options={})
+      def render(options = {}, extra_options = {})
         if options.is_a? String
-          options = { partial: options }.merge(extra_options) 
+          options = { partial: options }.merge(extra_options)
         elsif options.respond_to? :to_partial
           scope options
-          options = { partial: options.to_partial }.merge(extra_options) 
+          options = { partial: options.to_partial }.merge(extra_options)
         end
 
         partial = options.delete :partial
@@ -27,7 +27,7 @@ module Bobkit
 
         context = options.empty? ? scope : options
         if context.is_a? Hash or !context
-          context = Scope.new context 
+          context = Scope.new context
         end
 
         content ||= Slim::Template.new(partial_filename(partial), slim_options).render(context)
@@ -36,7 +36,7 @@ module Bobkit
         content
       end
 
-      private
+    private
 
       def partial_filename(partial)
         localized_template templates_folder, partial
@@ -49,9 +49,9 @@ module Bobkit
       def localized_template(folder, basename)
         preferred = "#{folder}/#{basename}.#{locale}.slim"
         return preferred if File.exist? preferred
+
         "#{folder}/#{basename}.slim"
       end
     end
-
   end
 end

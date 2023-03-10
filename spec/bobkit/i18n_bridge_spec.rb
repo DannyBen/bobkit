@@ -9,20 +9,19 @@ describe I18nBridge do
     use_defaults
   end
 
-  it "sets I18n locale" do
+  it 'sets I18n locale' do
     locale :fr
     expect(I18n.locale).to eq :fr
   end
 
-  it "provides access to t()" do
+  it 'provides access to t()' do
     locale :fr
-    expect(t('common.hello')).to eq "Bonjour"
+    expect(t('common.hello')).to eq 'Bonjour'
   end
 
-  it "provides access to l()" do
+  it 'provides access to l()' do
     locale :en
-    time = Time.parse "September 1, 2016"
-    expect(l(time)).to eq "Thursday, September 1, 00:00"
+    time = Time.parse 'September 1, 2016'
+    expect(l(time)).to eq 'Thursday, September 1, 00:00'
   end
-
 end

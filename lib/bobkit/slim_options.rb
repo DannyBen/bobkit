@@ -1,6 +1,6 @@
 module Bobkit
   module SlimOptions
-    def slim_options(options=nil)
+    def slim_options(options = nil)
       setopt :slim_options, options, slim_defaults
     end
 

@@ -9,7 +9,7 @@ module Bobkit
       include SlimBridge
       include LocationOptions
 
-      def compile(file, options={})
+      def compile(file, options = {})
         markdown = RDiscount.new file_content file
         content = markdown.to_html
         options[:content] = content
@@ -17,7 +17,7 @@ module Bobkit
         content
       end
 
-      private
+    private
 
       def file_content(basename)
         File.read markdown_file basename
@@ -27,6 +27,5 @@ module Bobkit
         "#{markdown_folder}/#{basename}.md"
       end
     end
-
   end
 end

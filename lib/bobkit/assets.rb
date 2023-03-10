@@ -2,7 +2,7 @@ module Bobkit
   module Assets
     include FileHelpers
 
-    def copy_asset(source, target=nil)
+    def copy_asset(source, target = nil)
       if target
         target = "#{output_folder}/#{target}"
       else

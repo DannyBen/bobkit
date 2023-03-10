@@ -12,7 +12,7 @@ css_output_folder    "#{output_folder}/css"
 js_output_folder     "#{output_folder}/js"
 
 # Generate the site
-render 'youtube', layout: 'default', video: 'tntOCGkgt98', output: "cat"
+render 'youtube', layout: 'default', video: 'tntOCGkgt98', output: 'cat'
 compile_css 'main', output: 'style'
 compile_js 'main', output: 'script'
 

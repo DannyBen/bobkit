@@ -5,7 +5,7 @@ module Bobkit
     end
 
     def setopt(*args)
-      OptionsHandler.instance.setopt *args
+      OptionsHandler.instance.setopt(*args)
     end
 
     def options
@@ -21,7 +21,7 @@ module Bobkit
         @options = {}
       end
 
-      def setopt(key, value=nil, default=nil)
+      def setopt(key, value = nil, default = nil)
         options[key] = value if value
         options[key] ||= default
         options[key]

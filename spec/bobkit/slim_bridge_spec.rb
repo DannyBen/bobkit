@@ -11,91 +11,90 @@ describe SlimBridge do
     output_folder 'tmp/spec'
   end
 
-  it "renders a simple partial" do
+  it 'renders a simple partial' do
     result = render 'simple_partial'
-    expect(result).to match /is a simple partial/
+    expect(result).to match(/is a simple partial/)
   end
 
-  it "renders a simple partial from another partial" do
+  it 'renders a simple partial from another partial' do
     result = render 'simple_render'
-    expect(result).to match /is a simple partial/
+    expect(result).to match(/is a simple partial/)
   end
 
-  it "renders a partial with a layout" do
+  it 'renders a partial with a layout' do
     result = render 'simple_partial', layout: 'default'
-    expect(result).to match /<header>.*Header/m
-    expect(result).to match /is a simple partial/
+    expect(result).to match(/<header>.*Header/m)
+    expect(result).to match(/is a simple partial/)
   end
 
-  it "renders a partial that calls another partial" do
+  it 'renders a partial that calls another partial' do
     result = render 'babushka', name: 'Big Babushka'
-    expect(result).to match /<h1>.*Big Babushka/m
-    expect(result).to match /<h2>.*Medium Babushka/m
-    expect(result).to match /<h3>.*Small Babushka/m
+    expect(result).to match(/<h1>.*Big Babushka/m)
+    expect(result).to match(/<h2>.*Medium Babushka/m)
+    expect(result).to match(/<h3>.*Small Babushka/m)
   end
 
-  it "renders a partial to a file" do
+  it 'renders a partial to a file' do
     outfile = "#{output_folder}/simple.html"
     expect(File.exist?(outfile)).to be false
 
     render 'simple_partial', output: 'simple'
 
     expect(File.exist?(outfile)).to be true
-    expect(File.read(outfile)).to match /is a simple partial/
+    expect(File.read(outfile)).to match(/is a simple partial/)
   end
 
-  it "renders an object" do
+  it 'renders an object' do
     user = SpecUser.new
     result = render user
-    expect(result).to match /Name: James Brown/
-    expect(result).to match /Email: james.brown@still-alive/
+    expect(result).to match(/Name: James Brown/)
+    expect(result).to match(/Email: james.brown@still-alive/)
   end
 
-  context "with localization" do
-    it "renders a localized string" do
+  context 'with localization' do
+    it 'renders a localized string' do
       locale :fr
       result = render 'inline_localized'
-      expect(result).to match /Bonjour/
+      expect(result).to match(/Bonjour/)
     end
 
-    it "renders a localized template" do
+    it 'renders a localized template' do
       locale :fr
       result = render 'fully_localized'
-      expect(result).to match /Ce modèle entier est pour l'anglais seulement/
+      expect(result).to match(/Ce modèle entier est pour l'anglais seulement/)
     end
   end
 
-  context "with hash scope" do
-    it "renders a partial" do
+  context 'with hash scope' do
+    it 'renders a partial' do
       result = render 'movie_partial', movie: 'Ace Ventura', actor: 'Jim Carrey'
-      expect(result).to match /Movie: Ace Ventura/
-      expect(result).to match /Actor: Jim Carrey/
+      expect(result).to match(/Movie: Ace Ventura/)
+      expect(result).to match(/Actor: Jim Carrey/)
     end
   end
 
-  context "with object scope" do
-    it "renders a partial" do
+  context 'with object scope' do
+    it 'renders a partial' do
       scope SpecUser.new
       result = render 'user_partial'
-      expect(result).to match /Name: James Brown/
-      expect(result).to match /Email: james.brown@still-alive/
+      expect(result).to match(/Name: James Brown/)
+      expect(result).to match(/Email: james.brown@still-alive/)
     end
 
-    it "can access scope methods" do
+    it 'can access scope methods' do
       scope SpecYoutube.new
       result = render 'youtube_partial'
-      expect(result).to match /Cat vs Printer/
-      expect(result).to match /<video>large/
-      expect(result).to match /YouTube footer/
+      expect(result).to match(/Cat vs Printer/)
+      expect(result).to match(/<video>large/)
+      expect(result).to match(/YouTube footer/)
     end
   end
 
-  context "with string content" do
-    it "renders with layout" do
+  context 'with string content' do
+    it 'renders with layout' do
       result = render content: '<p>A string content</p>', layout: 'default'
-      expect(result).to match /<header>.*Header/m
-      expect(result).to match /A string content/
+      expect(result).to match(/<header>.*Header/m)
+      expect(result).to match(/A string content/)
     end
   end
-
 end

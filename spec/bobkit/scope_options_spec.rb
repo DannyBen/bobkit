@@ -9,7 +9,7 @@ describe ScopeOptions do
     use_defaults
   end
 
-  it "sets a scope" do
+  it 'sets a scope' do
     scope user: 'Nikita'
     expect(scope.user).to eq 'Nikita'
   end

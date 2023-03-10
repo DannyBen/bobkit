@@ -1,5 +1,3 @@
-require "runfile-tasks"
-
 help   "Run a script in the dev folder"
 usage  "dev [<file>]"
 action :dev do |args|
@@ -7,5 +5,4 @@ action :dev do |args|
   system "bundle exec ruby dev/#{file}.rb"
 end
 
-RunfileTasks::RubyGems.all 'bobkit'
-RunfileTasks::Testing.rspec
+import_gem 'runfile-tasks/gem'

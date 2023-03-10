@@ -1,0 +1,134 @@
+# Offense count: 2
+Lint/UselessAssignment:
+  Exclude:
+    - 'examples/07_markdown_layout/example.rb'
+    - 'spec/bobkit/watcher_spec.rb'
+
+# Offense count: 1
+# Configuration parameters: CountAsOne.
+RSpec/ExampleLength:
+  Max: 10
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: CustomTransform, IgnoredWords, DisallowedExamples.
+# DisallowedExamples: works
+RSpec/ExampleWording:
+  Exclude:
+    - 'spec/bobkit/watcher_spec.rb'
+
+# Offense count: 10
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: implicit, each, example
+RSpec/HookArgument:
+  Exclude:
+    - 'spec/bobkit/assets_spec.rb'
+    - 'spec/bobkit/coffee_bridge_spec.rb'
+    - 'spec/bobkit/i18n_bridge_spec.rb'
+    - 'spec/bobkit/location_options_spec.rb'
+    - 'spec/bobkit/markdown_bridge_spec.rb'
+    - 'spec/bobkit/scope_options_spec.rb'
+    - 'spec/bobkit/slim_bridge_spec.rb'
+    - 'spec/bobkit/slim_options_spec.rb'
+    - 'spec/bobkit/watcher_spec.rb'
+
+# Offense count: 3
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: prefer_alias, prefer_alias_method
+Style/Alias:
+  Exclude:
+    - 'lib/bobkit/file_helpers.rb'
+    - 'lib/bobkit/scope.rb'
+
+# Offense count: 3
+# This cop supports unsafe autocorrection (--autocorrect-all).
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: always, conditionals
+Style/AndOr:
+  Exclude:
+    - 'lib/bobkit/scope.rb'
+    - 'lib/bobkit/slim_bridge.rb'
+
+# Offense count: 2
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: AllowOnlyRestArgument.
+Style/ArgumentsForwarding:
+  Exclude:
+    - 'lib/bobkit/watcher.rb'
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: EnforcedStyle, SingleLineConditionsOnly, IncludeTernaryExpressions.
+# SupportedStyles: assign_to_condition, assign_inside_condition
+Style/ConditionalAssignment:
+  Exclude:
+    - 'lib/bobkit/assets.rb'
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+Style/ExpandPathArguments:
+  Exclude:
+    - 'bobkit.gemspec'
+
+# Offense count: 1
+Style/MissingRespondToMissing:
+  Exclude:
+    - 'lib/bobkit/scope.rb'
+
+# Offense count: 8
+Style/MixinUsage:
+  Exclude:
+    - 'bin/*'
+    - 'spec/spec_helper.rb'
+    - 'examples/01_basic/example.rb'
+    - 'examples/02_multiple_pages/example.rb'
+    - 'examples/03_options/example.rb'
+    - 'examples/04_locales/example.rb'
+    - 'examples/05_watcher/example.rb'
+    - 'examples/06_markdown/example.rb'
+    - 'examples/07_markdown_layout/example.rb'
+
+# Offense count: 1
+# Configuration parameters: AllowedMethods.
+# AllowedMethods: respond_to_missing?
+Style/OptionalBooleanParameter:
+  Exclude:
+    - 'lib/bobkit/scope.rb'
+
+# Offense count: 2
+# This cop supports unsafe autocorrection (--autocorrect-all).
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: short, verbose
+Style/PreferredHashMethods:
+  Exclude:
+    - 'lib/bobkit/scope.rb'
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+Style/RedundantSelf:
+  Exclude:
+    - 'spec/bobkit/location_options_spec.rb'
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: EnforcedStyle, AllowInnerSlashes.
+# SupportedStyles: slashes, percent_r, mixed
+Style/RegexpLiteral:
+  Exclude:
+    - 'spec/bobkit/location_options_spec.rb'
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: MinSize.
+# SupportedStyles: percent, brackets
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: MinSize, WordRegex.
+# SupportedStyles: percent, brackets
+Style/WordArray:
+  EnforcedStyle: brackets
