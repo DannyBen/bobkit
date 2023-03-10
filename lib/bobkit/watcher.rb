@@ -1,8 +1,8 @@
 module Bobkit
   module Watcher
-    def watch(*args, &block)
+    def watch(...)
       # :nocov:
-      FileWatcherHandler.instance.watch(*args, &block)
+      FileWatcherHandler.instance.watch(...)
       # :nocov:
     end
 

@@ -26,7 +26,7 @@ module Bobkit
         content = options.delete :content
 
         context = options.empty? ? scope : options
-        if context.is_a? Hash or !context
+        if context.is_a?(Hash) || !context
           context = Scope.new context
         end
 

@@ -10,7 +10,7 @@ module Bobkit
     end
 
     def method_missing(method_name, *arguments, &block)
-      if scope.respond_to?(:key?) and scope.key?(method_name)
+      if scope.respond_to?(:key?) && scope.key?(method_name)
         scope[method_name]
       elsif scope.respond_to? method_name
         scope.send method_name, *arguments
@@ -26,6 +26,6 @@ module Bobkit
         super
       end
     end
-    alias_method :have?, :respond_to?
+    alias have? respond_to?
   end
 end

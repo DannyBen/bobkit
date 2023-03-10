@@ -20,15 +20,15 @@ describe LocationOptions do
 
   it 'sets a base folder for all locations' do
     root_folder 'app'
-    folders = [
-      :templates_folder, :markdown_folder, :styles_folder,
-      :coffee_folder, :output_folder, :assets_folder, :locales_folder,
-      :layouts_folder, :css_output_folder, :js_output_folder,
-      :assets_output_folder
+    folders = %i[
+      templates_folder markdown_folder styles_folder
+      coffee_folder output_folder assets_folder locales_folder
+      layouts_folder css_output_folder js_output_folder
+      assets_output_folder
     ]
 
     folders.each do |folder|
-      expect(self.send(folder)).to match(/^app\//)
+      expect(send(folder)).to match(%r{^app/})
     end
   end
 
