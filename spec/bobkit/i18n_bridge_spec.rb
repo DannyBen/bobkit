@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe I18nBridge do
-  before :each do
+  before do
     locales_folder 'spec/fixtures/locales'
   end
 

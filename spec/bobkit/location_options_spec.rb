@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe LocationOptions do
-  before :each do
+  before do
     use_defaults
   end
 

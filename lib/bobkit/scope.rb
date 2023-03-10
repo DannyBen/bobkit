@@ -10,7 +10,7 @@ module Bobkit
     end
 
     def method_missing(method_name, *arguments, &block)
-      if scope.respond_to?(:key?) && scope.key?(method_name)
+      if scope.respond_to?(:key?) && scope.has_key?(method_name)
         scope[method_name]
       elsif scope.respond_to? method_name
         scope.send method_name, *arguments
@@ -20,7 +20,7 @@ module Bobkit
     end
 
     def respond_to_missing?(method_name, include_private = false)
-      if (scope.respond_to?(:key?) && scope.key?(method_name)) || scope.respond_to?(method_name)
+      if (scope.respond_to?(:key?) && scope.has_key?(method_name)) || scope.respond_to?(method_name)
         true
       else
         super

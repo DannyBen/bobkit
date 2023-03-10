@@ -5,7 +5,7 @@ describe SlimBridge do
     FileUtils.rm_rf 'tmp/spec'
   end
 
-  before :each do
+  before do
     templates_folder 'spec/fixtures/templates'
     locales_folder 'spec/fixtures/locales'
     output_folder 'tmp/spec'

@@ -5,7 +5,7 @@ describe MarkdownBridge do
     FileUtils.rm_rf 'tmp/spec'
   end
 
-  before :each do
+  before do
     markdown_folder 'spec/fixtures/markdown'
     templates_folder 'spec/fixtures/templates'
     output_folder 'tmp/spec'

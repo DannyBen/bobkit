@@ -5,13 +5,13 @@ describe Watcher do
     FileUtils.rm_rf 'tmp/spec'
   end
 
-  before :each do
+  before do
     templates_folder 'tmp/spec'
   end
 
   it 'watches for change' do
     processed = []
-    thread = Thread.new(filewatcher, processed) do
+    Thread.new(filewatcher, processed) do
       filewatcher.watch { |f, _e| processed << f }
     end
     sleep 0.3

@@ -1,5 +1,3 @@
-inherit_from: .rubocop_todo.yml
-
 require:
   - rubocop-performance
   - rubocop-rspec
@@ -13,4 +11,13 @@ AllCops:
   TargetRubyVersion: 2.7
   Exclude:
     - 'dev/**/*'
+
+Style/MixinUsage:
+  Exclude:
+    - 'spec/spec_helper.rb'
+    - 'examples/**/*'
+
+RSpec/ExampleLength:
+  Max: 12
+
 

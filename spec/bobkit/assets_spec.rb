@@ -5,13 +5,13 @@ describe Assets do
     FileUtils.rm_rf 'tmp/spec'
   end
 
-  before :each do
+  before do
     FileUtils.rm_rf 'tmp/spec'
     assets_folder 'spec/fixtures/assets'
     output_folder 'tmp/spec'
   end
 
-  after :each do
+  after do
     use_defaults
   end
 

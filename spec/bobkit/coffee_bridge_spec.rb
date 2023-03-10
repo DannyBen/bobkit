@@ -5,7 +5,7 @@ describe CoffeeBridge do
     FileUtils.rm_rf 'tmp/spec'
   end
 
-  before :each do
+  before do
     coffee_folder 'spec/fixtures/coffee'
     js_output_folder 'tmp/spec'
   end
