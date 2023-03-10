@@ -11,6 +11,6 @@ watch do |filename, event|
 end
 
 def regenerate
-  puts "Generating..."
+  puts 'Generating...'
   # Your generation logic here
 end

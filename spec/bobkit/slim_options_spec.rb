@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SlimOptions do
-  before :each do
+  before do
     use_defaults
   end
 
@@ -9,12 +9,12 @@ describe SlimOptions do
     use_defaults
   end
 
-  it "has default slim options" do
-    expect(slim_options[:pretty]).to eq true
+  it 'has default slim options' do
+    expect(slim_options[:pretty]).to be true
   end
 
-  it "sets slim options" do
+  it 'sets slim options' do
     slim_options pretty: false
-    expect(slim_options[:pretty]).to eq false
+    expect(slim_options[:pretty]).to be false
   end
 end

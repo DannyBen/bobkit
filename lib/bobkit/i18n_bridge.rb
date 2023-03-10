@@ -2,7 +2,7 @@ module Bobkit
   module I18nBridge
     include I18nMixin
 
-    def locale(language=nil)
+    def locale(language = nil)
       I18nHandler.instance.locale language if language
       I18n.locale
     end
@@ -20,6 +20,5 @@ module Bobkit
         I18n.locale = language
       end
     end
-    
   end
 end

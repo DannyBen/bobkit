@@ -5,39 +5,38 @@ describe Assets do
     FileUtils.rm_rf 'tmp/spec'
   end
 
-  before :each do 
+  before do
     FileUtils.rm_rf 'tmp/spec'
     assets_folder 'spec/fixtures/assets'
     output_folder 'tmp/spec'
   end
 
-  after :each do
+  after do
     use_defaults
   end
 
-  it "copies a file" do
+  it 'copies a file' do
     target = "#{assets_output_folder}/more/bobcat.jpg"
 
     copy_asset 'more/bobcat.jpg'
 
-    expect(File.exist?(target)).to eq true
+    expect(File.exist?(target)).to be true
   end
 
-  it "copies a folder" do
+  it 'copies a folder' do
     target = "#{assets_output_folder}/zip_files"
 
     copy_asset 'zip_files'
 
-    expect(File.directory?(target)).to eq true
-    expect(File.exist?("#{target}/fakezip.txt")).to eq true
+    expect(File.directory?(target)).to be true
+    expect(File.exist?("#{target}/fakezip.txt")).to be true
   end
 
-  it "copies with explicit target" do
-    target = "put/me/down.jpg"
+  it 'copies with explicit target' do
+    target = 'put/me/down.jpg'
 
     copy_asset 'more/bobcat.jpg', target
 
-    expect(File.exist?("#{output_folder}/#{target}")).to eq true
+    expect(File.exist?("#{output_folder}/#{target}")).to be true
   end
-  
 end
