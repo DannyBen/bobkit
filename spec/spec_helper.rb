@@ -6,7 +6,7 @@ require 'bundler'
 Bundler.require :default, :development
 
 require 'fileutils'
-require 'byebug'
+require 'debug'
 
 include Bobkit
 

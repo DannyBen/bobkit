@@ -14,10 +14,10 @@ module Bobkit
       include Singleton
       include LocationOptions
 
-      def watch(paths = nil, &block)
+      def watch(paths = nil, &)
         # :nocov:
         @paths = paths
-        filewatcher.watch(&block)
+        filewatcher.watch(&)
         # :nocov:
       end
 

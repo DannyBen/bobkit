@@ -1,7 +1,6 @@
 # Markdown Layout
 
 require 'bobkit'
-require 'byebug'
 include Bobkit::Tasks
 
 # All options pass through to the slim render function so you can
