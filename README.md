@@ -1,11 +1,5 @@
 # Bobkit - Site Generation Toolkit
 
-[![Gem Version](https://badge.fury.io/rb/bobkit.svg)](https://badge.fury.io/rb/bobkit)
-[![Build Status](https://github.com/DannyBen/bobkit/workflows/Test/badge.svg)](https://github.com/DannyBen/bobkit/actions?query=workflow%3ATest)
-[![Maintainability](https://api.codeclimate.com/v1/badges/64c20ebaaf8ecff0948d/maintainability)](https://codeclimate.com/github/DannyBen/bobkit/maintainability)
-
----
-
 Bobkit is a lightweight toolkit for generating static websites with:
 
 #### `Slim + SCSS + CoffeeScript + Markdown + I18n`
