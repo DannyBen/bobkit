@@ -1,5 +1,7 @@
 # Bobkit - Site Generation Toolkit
 
+![repocard](repocard.svg)
+
 Bobkit is a lightweight toolkit for generating static websites with:
 
 #### `Slim + SCSS + CoffeeScript + Markdown + I18n`
